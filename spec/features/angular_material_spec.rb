@@ -1,3 +1,4 @@
+require 'spec_helper'
 
 feature 'Angular Material' do
   scenario 'It works!' do
