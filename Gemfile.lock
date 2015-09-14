@@ -54,6 +54,7 @@ DEPENDENCIES
   capybara
   capybara-angular-material!
   poltergeist
+  rack
   rspec
 
 BUNDLED WITH

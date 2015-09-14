@@ -17,6 +17,7 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split($ORS) - ['Gemfile.lock']
   gem.require_paths = %w(spec)
 
+  gem.add_development_dependency('rack')
   gem.add_development_dependency('rspec')
   gem.add_development_dependency('capybara')
   gem.add_development_dependency('poltergeist')
