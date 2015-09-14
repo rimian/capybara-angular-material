@@ -1,2 +1,1 @@
-# capybara-angular-material
-Capybara Selectors for Angular Material
+# Capybara Selectors for Angular Material
