@@ -2,6 +2,7 @@ require 'spec_helper'
 
 feature 'Angular Material' do
   scenario 'It works!' do
-    expect(true).to eq true
+    visit('/index.html')
+    expect(page).to have_content 'Capybara Angular Material'
   end
 end

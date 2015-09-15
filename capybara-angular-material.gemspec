@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name          = 'capybara-angular-material'
-  gem.version       = '0.0.1'
+  gem.version       = '0.0.2'
   gem.license       = 'MIT'
 
   gem.authors       = ['Rimian Perkins']
@@ -12,7 +12,7 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split($ORS) - ['Gemfile.lock']
   gem.require_paths = %w(spec)
 
-  gem.add_development_dependency('rspec')
-  gem.add_development_dependency('capybara')
-  gem.add_development_dependency('poltergeist')
+  gem.add_development_dependency('rspec', ['>= 2.2.0'])
+  gem.add_development_dependency('capybara', ['>= 2.5.0'])
+  gem.add_development_dependency('poltergeist', ['>= 1.6.0'])
 end
