@@ -6,5 +6,5 @@ require 'capybara/poltergeist'
 RSpec.configure do |config|
   config.order = :random
   Capybara.default_driver = :poltergeist
-  Capybara.app = Rack::Directory.new('spec/public')
+  Capybara.app = Rack::Directory.new('./')
 end

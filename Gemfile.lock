@@ -51,10 +51,10 @@ PLATFORMS
 
 DEPENDENCIES
   bundler (~> 1.1)
-  capybara (>= 2.5.0)
+  capybara (~> 2.5, >= 2.5.0)
   capybara-angular-material!
-  poltergeist (>= 1.6.0)
-  rspec (>= 2.2.0)
+  poltergeist (~> 1.6, >= 1.6.0)
+  rspec (~> 3.3, >= 3.3.0)
 
 BUNDLED WITH
    1.10.6
