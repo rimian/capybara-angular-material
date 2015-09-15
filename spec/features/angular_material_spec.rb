@@ -1,8 +1,7 @@
-require 'spec_helper'
 
 feature 'Angular Material' do
-  scenario 'It works!' do
+  scenario 'Loads the page' do
     visit('/index.html')
-    expect(page).to have_content 'Capybara Angular Material'
+    expect(page.find('h1')).to have_content 'Capybara Angular Material'
   end
 end
