@@ -10,3 +10,9 @@ This includes a number of selectors for testing [Angular Material](https://mater
 Add this line to your application's Gemfile:
 
     gem 'capybara-angular-material'
+
+## Usage
+
+```
+have_md_checkbox('Some text')
+```
