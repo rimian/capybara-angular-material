@@ -5,7 +5,7 @@ module Capybara
         include Capybara::RSpecMatchers
 
         def have_md_checkbox(*args)
-          have_selector('md-checkbox', :text => args[1])
+          have_selector('md-checkbox', :text => args[0])
         end
       end
     end
