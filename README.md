@@ -13,6 +13,16 @@ Add this line to your application's Gemfile:
 
 ## Usage
 
+In your spec helper, include the DSL:
+
+```
+RSpec.configure do |config|
+  include Capybara::Angular::Material
+end
+```
+
+Then you can use the selectors in your specs:
+
 ```
 have_md_checkbox('Some text')
 ```
