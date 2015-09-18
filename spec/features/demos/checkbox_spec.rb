@@ -1,46 +1,39 @@
 
 feature 'Angular Material Demos - Checkbox' do
-  scenario 'It has a Checkbox' do
-    expect('<md-checkbox>cheese</md-checkbox>').to have_md_checkbox 'cheese'
+  let(:checked_locator) { 'Woof' }
+  let(:unchecked_locator) { 'A nice checkbox' }
+
+  before { visit('/index.html') }
+
+  it 'has no checkbox' do
+    expect(page).not_to have_md_checkbox 'checkbox that does not exist'
   end
 
-  scenario 'It normalises space' do
-    expect('<md-checkbox> cheese </md-checkbox>').to have_md_checkbox 'cheese'
+  it 'has a checkbox' do
+    expect(page).to have_md_checkbox checked_locator
   end
 
-  scenario 'It does not have a Checkbox' do
-    expect('<md-checkbox>apple</md-checkbox>').not_to have_md_checkbox 'orange'
+  it 'has a checkbox' do
+    expect(page).to have_md_checkbox unchecked_locator
   end
 
   it 'does not match part of the text' do
-    expect('<md-checkbox>this is a checkbox with text in it</md-checkbox>').not_to have_md_checkbox('a checkbox')
+    expect(page).not_to have_md_checkbox checked_locator[0...7].strip!
+  end
+
+  it 'has a checkbox that is not checked' do
+    expect(page).to have_md_checkbox(unchecked_locator, :checked => false)
   end
 
   it 'is not checked' do
-    expect('<md-checkbox aria-checked="false">zephod</md-checkbox>').to have_md_checkbox('zephod', :checked => false)
-  end
-
-  it 'is not checked' do
-    expect('<md-checkbox aria-checked="false">zephod</md-checkbox>').not_to have_md_checkbox('zephod', :checked => true)
+    expect(page).not_to have_md_checkbox(unchecked_locator, :checked => true)
   end
 
   it 'is checked' do
-    expect('<md-checkbox aria-checked="true">orange</md-checkbox>').to have_md_checkbox('orange', :checked => true)
+    expect(page).to have_md_checkbox(checked_locator, :checked => true)
   end
 
   it 'is checked' do
-    expect('<md-checkbox aria-checked="true">orange</md-checkbox>').not_to have_md_checkbox('orange', :checked => false)
-  end
-
-  describe 'page' do
-    before { visit('/index.html') }
-
-    scenario 'It has a Checkbox' do
-      expect(page).to have_md_checkbox 'A nice checkbox'
-    end
-
-    scenario 'It has no Checkbox' do
-      expect(page).not_to have_md_checkbox 'checkbox that does not exist'
-    end
+    expect(page).not_to have_md_checkbox(checked_locator, :checked => false)
   end
 end

@@ -62,7 +62,7 @@ DEPENDENCIES
   capybara-angular-material!
   poltergeist (~> 1.6, >= 1.6.0)
   rspec (~> 3.3, >= 3.3.0)
-  sinatra
+  sinatra (~> 1.4, >= 1.4.6)
 
 BUNDLED WITH
    1.10.6

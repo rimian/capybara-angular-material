@@ -1,6 +1,9 @@
 
-angular.module('app', []).controller('appController', function($scope) {
+angular.module('app', ['ngMaterial']).controller('appController', function($scope) {
   $scope.inputs = {
-    checkbox: {value: false, name: 'A nice checkbox'}
+    checkbox: {
+      unchecked: {value: false, name: 'A nice checkbox'},
+      checked:  {value: true, name: 'Woof'}
+    }
   };
 });

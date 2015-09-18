@@ -1,23 +1,28 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Capybara Angular Material</title>
-    <meta charset="utf-8">
-  </head>
-  <body ng-app="app">
+<html ng-strict-di>
+<head>
+  <title>Capybara Angular Material</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/node_modules/angular-material/angular-material.min.css">
+</head>
+<body ng-app="app">
 
-    <form role="form" name="form" ng-controller="appController" novalidate>
-      <h1>Capybara Angular Material</h1>
+  <form role="form" name="form" ng-controller="appController" novalidate class="md-padding">
+    <h1>Capybara Angular Material</h1>
 
-      <md-checkbox ng-model="inputs.checkbox.value">
-        {{inputs.checkbox.name}}
-      </md-checkbox>
+    <md-checkbox ng-model="inputs.checkbox.unchecked.value" aria-label="{{inputs.checkbox.unchecked.name}}">
+      {{inputs.checkbox.unchecked.name}}
+    </md-checkbox>
 
-    </form>
+    <md-checkbox ng-model="inputs.checkbox.checked.value" aria-label="{{inputs.checkbox.checked.name}}">
+      {{inputs.checkbox.checked.name}}
+    </md-checkbox>
+  </form>
 
-    <script src="node_modules/angular/angular.min.js"></script>
-    <script src="node_modules/angular-material/angular-material.min.js"></script>
-    <script src="node_modules/angular-aria/angular-aria.min.js"></script>
-    <script src="app/js/app.js"></script>
-  </body>
+  <script src="/node_modules/angular/angular.min.js"></script>
+  <script src="/node_modules/angular-material/angular-material.min.js"></script>
+  <script src="/node_modules/angular-animate/angular-animate.min.js"></script>
+  <script src="/node_modules/angular-aria/angular-aria.min.js"></script>
+  <script src="/app/js/app.js"></script>
+</body>
 </html>
