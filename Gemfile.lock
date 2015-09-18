@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    capybara-angular-material (0.0.6)
+    capybara-angular-material (0.0.7)
 
 GEM
   remote: https://rubygems.org/

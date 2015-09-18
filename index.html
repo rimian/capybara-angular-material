@@ -9,8 +9,8 @@
     <form role="form" name="form" ng-controller="appController" novalidate>
       <h1>Capybara Angular Material</h1>
 
-      <md-checkbox>
-        A nice checkbox
+      <md-checkbox ng-model="inputs.checkbox.value">
+        {{inputs.checkbox.name}}
       </md-checkbox>
 
     </form>
