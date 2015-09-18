@@ -17,7 +17,7 @@ Add this line to your application's Gemfile:
 
 In your spec helper, include the DSL:
 
-```
+```ruby
 require 'capybara/angular/material'
 
 RSpec.configure do |config|
