@@ -13,7 +13,8 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split($ORS) - ['Gemfile.lock']
   gem.require_paths = %w(lib)
 
-  gem.add_development_dependency('rspec', ['~> 3.3', '>= 3.3.0'])
   gem.add_development_dependency('capybara', ['~> 2.5', '>= 2.5.0'])
   gem.add_development_dependency('poltergeist', ['~> 1.6', '>= 1.6.0'])
+  gem.add_development_dependency('rspec', ['~> 3.3', '>= 3.3.0'])
+  gem.add_development_dependency('sinatra', ['~> 1.4', '>= 1.4.6'])
 end
