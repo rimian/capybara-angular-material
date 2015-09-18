@@ -5,6 +5,8 @@
 
 This includes a number of selectors for testing [Angular Material](https://material.angularjs.org) components.
 
+This is tested using the capybara/poltergeist driver.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -16,13 +18,25 @@ Add this line to your application's Gemfile:
 In your spec helper, include the DSL:
 
 ```
+require 'capybara/angular/material'
+
 RSpec.configure do |config|
   include Capybara::Angular::Material
 end
 ```
 
-Then you can use the selectors in your specs:
+### Checkboxes
+
+This tag: `<md-checkbox>Some text</md-checkbox>`
 
 ```
 have_md_checkbox('Some text')
 ```
+
+Checked is ignored unless set in options:
+
+```
+have_md_checkbox('Other thing', :checked => true)
+```
+
+Checked boolean is matched against the `aria-checked` attribute.
