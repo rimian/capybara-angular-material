@@ -5,3 +5,4 @@
 .ruby-gemset
 .bundle
 node_modules
+capybara-*
