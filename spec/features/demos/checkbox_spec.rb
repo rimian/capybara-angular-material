@@ -4,7 +4,7 @@ feature 'Angular Material Demos - Checkbox' do
   let(:unchecked_locator) { 'A nice checkbox' }
 
   before do
-    visit('/app/index.html')
+    visit('/index.html#/checkbox')
     expect(page.find('h1')).to have_content 'Capybara Angular Material'
   end
 

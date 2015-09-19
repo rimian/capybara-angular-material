@@ -1,6 +1,6 @@
 feature 'Angular Material Demos - Button' do
   before do
-    visit('/app/index.html')
+    visit('/index.html#/button')
     expect(page.find('h1')).to have_content 'Capybara Angular Material'
   end
 
