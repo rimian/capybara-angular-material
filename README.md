@@ -40,3 +40,9 @@ have_md_checkbox('Other thing', :checked => true)
 ```
 
 Checked boolean is matched against the `aria-checked` attribute.
+
+### Buttons
+
+```
+have_md_button('Some text')
+```
