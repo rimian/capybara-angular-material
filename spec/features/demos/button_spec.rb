@@ -1,5 +1,8 @@
 feature 'Angular Material Demos - Button' do
-  before { visit('/index.html') }
+  before do
+    visit('/app/index.html')
+    expect(page.find('h1')).to have_content 'Capybara Angular Material'
+  end
 
   it 'has a button' do
     expect(page).to have_md_button('Click me')
