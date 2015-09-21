@@ -13,6 +13,8 @@ Add this line to your application's Gemfile:
 
     gem 'capybara-angular-material'
 
+You'll also need to install Capybara.
+
 ## Usage
 
 In your spec helper, include the DSL:

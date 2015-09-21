@@ -3,3 +3,10 @@
 ## Installing on your local machine
 
 0. `Bundle install`
+0. `npm install`
+
+## Running Development Fixture
+
+```rackup -p8000```
+
+Then browse to localhost:8000 to view the app that rspec tests.
