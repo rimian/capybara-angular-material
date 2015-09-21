@@ -12,7 +12,8 @@ module Capybara
         end
 
         def have_md_radio_button(locator, options={})
-          HaveSelector.new(:xpath, "//md-radio-button/*/span[normalize-space(text())='#{locator}']")
+          checked = "[@aria-checked='#{options[:checked].to_s}']" if options.has_key?(:checked)
+          HaveSelector.new(:xpath, "//md-radio-button#{checked}/*/span[normalize-space(text())='#{locator}']")
         end
       end
     end
