@@ -11,7 +11,7 @@ module Capybara
           HaveSelector.new(:xpath, "//md-checkbox#{checked}/*/span[normalize-space(text())='#{locator}']", options.reject {|k,v| k == :checked})
         end
 
-        def have_md_radio_button(locator)
+        def have_md_radio_button(locator, options={})
           HaveSelector.new(:xpath, "//md-radio-button/*/span[normalize-space(text())='#{locator}']")
         end
       end
