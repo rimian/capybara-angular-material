@@ -6,6 +6,8 @@ feature 'Angular Material Demos - radio' do
 
   it 'has no radio button' do
     expect(page).not_to have_md_radio_button('This button does not exist')
+    expect(page).not_to have_md_radio_button('This button does not exist', :checked => true)
+    expect(page).not_to have_md_radio_button('This button does not exist', :checked => false)
   end
 
   it 'has a radio button with content' do
