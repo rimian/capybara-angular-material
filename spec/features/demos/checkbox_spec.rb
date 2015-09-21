@@ -1,12 +1,15 @@
 
 feature 'Angular Material Demos - Checkbox' do
-  let(:checked_locator) { 'Woof' }
-  let(:unchecked_locator) { 'A nice checkbox' }
+  let(:checked_locator) { 'Checkbox 1: true' }
+  let(:unchecked_locator) { 'Checkbox (md-primary): No Ink' }
 
   before do
     visit('/index.html#/checkbox')
     expect(page.find('h1')).to have_content 'Capybara Angular Material'
   end
+
+  it 'is disabled'
+  it 'is not disabled'
 
   it 'has no checkbox' do
     expect(page).not_to have_md_checkbox 'checkbox that does not exist'

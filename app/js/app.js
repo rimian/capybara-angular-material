@@ -10,10 +10,10 @@ angular.module('app', ['ngMaterial', 'ngRoute']).config(function($routeProvider)
     group3 : 'avatar-1'
   };
 }).controller('checkboxCtrl', function($scope) {
-  $scope.inputs = {
-    checkbox: {
-      unchecked: {value: false, name: 'A nice checkbox'},
-      checked:  {value: true, name: 'Woof'}
-    }
-  };
+  $scope.data = {};
+  $scope.data.cb1 = true;
+  $scope.data.cb2 = false;
+  $scope.data.cb3 = false;
+  $scope.data.cb4 = false;
+  $scope.data.cb5 = false;
 });
