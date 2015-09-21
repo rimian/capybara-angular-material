@@ -3,6 +3,7 @@ angular.module('app', ['ngMaterial', 'ngRoute']).config(function($routeProvider)
   $routeProvider.when('/button', {templateUrl: 'app/partials/button.html', controller: 'buttonCtrl'});
   $routeProvider.when('/checkbox', {templateUrl: 'app/partials/checkbox.html', controller: 'checkboxCtrl'});
   $routeProvider.when('/radio', {templateUrl: 'app/partials/radio.html', controller: 'radioCtrl'});
+  $routeProvider.when('/select', {templateUrl: 'app/partials/select.html', controller: 'selectCtrl'});
 }).controller('appController', function($scope) {
 }).controller('buttonCtrl', function($scope) {
   $scope.title1 = 'Button';
@@ -51,4 +52,9 @@ angular.module('app', ['ngMaterial', 'ngRoute']).config(function($routeProvider)
   $scope.removeItem = function() {
     $scope.radioData.pop();
   };
+}).controller('selectCtrl', function() {
+  this.userState = '';
+  this.states = ('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS ' +
+      'MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI ' +
+      'WY').split(' ').map(function (state) { return { abbrev: state }; });
 });

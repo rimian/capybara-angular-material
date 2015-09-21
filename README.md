@@ -48,3 +48,12 @@ Checked boolean is matched against the `aria-checked` attribute.
 ```
 have_md_button('Some text')
 ```
+
+### Radio Button
+
+```
+have_md_radio_button('Banana', :checked => true)
+have_md_radio_button('Banana')
+```
+
+### Select
