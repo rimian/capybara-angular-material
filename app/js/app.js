@@ -5,11 +5,10 @@ angular.module('app', ['ngMaterial', 'ngRoute']).config(function($routeProvider)
   $routeProvider.when('/radio', {templateUrl: 'app/partials/radio.html', controller: 'appController'});
 }).controller('appController', function($scope) {
 }).controller('buttonCtrl', function($scope) {
-  $scope.data = {
-    group1 : 'Banana',
-    group2 : '2',
-    group3 : 'avatar-1'
-  };
+  $scope.title1 = 'Button';
+  $scope.title4 = 'Warn';
+  $scope.isDisabled = true;
+  $scope.googleUrl = 'http://google.com';
 }).controller('checkboxCtrl', function($scope) {
   $scope.data = {};
   $scope.data.cb1 = true;

@@ -4,8 +4,10 @@ feature 'Angular Material Demos - Button' do
     expect(page.find('h1')).to have_content 'Capybara Angular Material'
   end
 
+  it 'has disabled button'
+
   it 'has a button' do
-    expect(page).to have_md_button('Click me')
+    expect(page).to have_md_button('Button')
   end
 
   it 'has no button' do
