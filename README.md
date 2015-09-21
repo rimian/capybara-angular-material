@@ -57,3 +57,7 @@ have_md_radio_button('Banana')
 ```
 
 ### Select
+
+```
+have_md_radio_button('Some place holder text')
+```
