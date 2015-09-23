@@ -7,7 +7,7 @@ module Capybara
         end
 
         def have_md_checkbox(locator, options={})
-          HaveSelector.new(:xpath, "//md-checkbox#{aria_checked(options)}/*/span[normalize-space(text())='#{locator}']")
+          HaveSelector.new(:xpath, "//md-checkbox#{aria_checked(options)}#{ng_disabled(options)}/*/span[normalize-space(text())='#{locator}']")
         end
 
         def have_md_radio_button(locator, options={})
@@ -22,6 +22,10 @@ module Capybara
 
         def aria_checked(options)
           "[@aria-checked='#{options[:checked].to_s}']" if options.has_key?(:checked)
+        end
+
+        def ng_disabled(options)
+          "[@ng-disabled='#{options[:disabled].to_s}']" if options.has_key?(:disabled)
         end
       end
     end
