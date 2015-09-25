@@ -10,6 +10,14 @@ module Capybara
           HaveSelector.new(:xpath, "//md-checkbox#{aria_checked(options)}#{ng_disabled(options)}/*/span[normalize-space(text())='#{locator}']")
         end
 
+        def have_md_list
+          HaveSelector.new(:xpath, '//md-list')
+        end
+
+        def have_md_list_item(locator)
+          HaveSelector.new(:xpath, "//md-list-item[.//*[contains(text(), '#{locator}')]]")
+        end
+
         def have_md_radio_button(locator, options={})
           HaveSelector.new(:xpath, "//md-radio-button#{aria_checked(options)}/*/span[normalize-space(text())='#{locator}']")
         end

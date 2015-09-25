@@ -2,6 +2,7 @@
 angular.module('app', ['ngMaterial', 'ngRoute']).config(function($routeProvider) {
   $routeProvider.when('/button', {templateUrl: 'app/partials/button.html', controller: 'buttonCtrl'});
   $routeProvider.when('/checkbox', {templateUrl: 'app/partials/checkbox.html', controller: 'checkboxCtrl'});
+  $routeProvider.when('/list', {templateUrl: 'app/partials/list.html', controller: 'listCtrl'});
   $routeProvider.when('/radio', {templateUrl: 'app/partials/radio.html', controller: 'radioCtrl'});
   $routeProvider.when('/select', {templateUrl: 'app/partials/select.html', controller: 'selectCtrl'});
 }).controller('appController', function($scope) {
@@ -17,6 +18,49 @@ angular.module('app', ['ngMaterial', 'ngRoute']).config(function($routeProvider)
   $scope.data.cb3 = false;
   $scope.data.cb4 = false;
   $scope.data.cb5 = false;
+}).controller('listCtrl', function($scope) {
+    var imagePath = 'img/list/60.jpeg';
+    $scope.phones = [
+      { type: 'Home', number: '(555) 251-1234' },
+      { type: 'Cell', number: '(555) 786-9841' },
+    ];
+    $scope.todos = [
+      {
+        face : imagePath,
+        what: 'Brunch this weekend?',
+        who: 'Min Li Chan',
+        when: '3:08PM',
+        notes: " I'll be in your neighborhood doing errands"
+      },
+      {
+        face : imagePath,
+        what: 'Brunch this weekend?',
+        who: 'Min Li Chan',
+        when: '3:08PM',
+        notes: " I'll be in your neighborhood doing errands"
+      },
+      {
+        face : imagePath,
+        what: 'Brunch this weekend?',
+        who: 'Min Li Chan',
+        when: '3:08PM',
+        notes: " I'll be in your neighborhood doing errands"
+      },
+      {
+        face : imagePath,
+        what: 'Brunch this weekend?',
+        who: 'Min Li Chan',
+        when: '3:08PM',
+        notes: " I'll be in your neighborhood doing errands"
+      },
+      {
+        face : imagePath,
+        what: 'Brunch this weekend?',
+        who: 'Min Li Chan',
+        when: '3:08PM',
+        notes: " I'll be in your neighborhood doing errands"
+      },
+    ];
 }).controller('radioCtrl', function($scope) {
   $scope.data = {
     group1 : 'Banana',
