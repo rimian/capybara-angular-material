@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ['Rimian Perkins']
   gem.email         = ['hello@rimian.com.au']
   gem.summary       = 'Capybara DSL for Angular Material'
-  gem.description   = 'Provides selectors to test Angular Material Directives'
+  gem.description   = 'Provides selectors to test Angular Material Directives with Capybara'
 
   gem.homepage      = 'https://github.com/rimian/capybara-angular-material'
 

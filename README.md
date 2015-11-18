@@ -7,6 +7,8 @@ This includes a number of selectors for testing [Angular Material](https://mater
 
 This is tested using the capybara/poltergeist driver.
 
+If you want to test how this works locally, check out this repo, install then run ```rackup -p8000```. You'll see the paths in the app.js file. eg: ```localhost:8000/#/radio```. I'll get around to documenting more later.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -47,4 +49,17 @@ Checked boolean is matched against the `aria-checked` attribute.
 
 ```
 have_md_button('Some text')
+```
+
+### Radio Button
+
+```
+have_md_radio_button('Banana', :checked => true)
+have_md_radio_button('Banana')
+```
+
+### Select
+
+```
+have_md_radio_button('Some place holder text')
 ```

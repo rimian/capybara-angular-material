@@ -2,7 +2,9 @@
 angular.module('app', ['ngMaterial', 'ngRoute']).config(function($routeProvider) {
   $routeProvider.when('/button', {templateUrl: 'app/partials/button.html', controller: 'buttonCtrl'});
   $routeProvider.when('/checkbox', {templateUrl: 'app/partials/checkbox.html', controller: 'checkboxCtrl'});
+  $routeProvider.when('/list', {templateUrl: 'app/partials/list.html', controller: 'listCtrl'});
   $routeProvider.when('/radio', {templateUrl: 'app/partials/radio.html', controller: 'radioCtrl'});
+  $routeProvider.when('/select', {templateUrl: 'app/partials/select.html', controller: 'selectCtrl'});
 }).controller('appController', function($scope) {
 }).controller('buttonCtrl', function($scope) {
   $scope.title1 = 'Button';
@@ -16,6 +18,49 @@ angular.module('app', ['ngMaterial', 'ngRoute']).config(function($routeProvider)
   $scope.data.cb3 = false;
   $scope.data.cb4 = false;
   $scope.data.cb5 = false;
+}).controller('listCtrl', function($scope) {
+    var imagePath = 'img/list/60.jpeg';
+    $scope.phones = [
+      { type: 'Home', number: '(555) 251-1234' },
+      { type: 'Cell', number: '(555) 786-9841' },
+    ];
+    $scope.todos = [
+      {
+        face : imagePath,
+        what: 'Brunch this weekend?',
+        who: 'Min Li Chan',
+        when: '3:08PM',
+        notes: " I'll be in your neighborhood doing errands"
+      },
+      {
+        face : imagePath,
+        what: 'Brunch this weekend?',
+        who: 'Min Li Chan',
+        when: '3:08PM',
+        notes: " I'll be in your neighborhood doing errands"
+      },
+      {
+        face : imagePath,
+        what: 'Brunch this weekend?',
+        who: 'Min Li Chan',
+        when: '3:08PM',
+        notes: " I'll be in your neighborhood doing errands"
+      },
+      {
+        face : imagePath,
+        what: 'Brunch this weekend?',
+        who: 'Min Li Chan',
+        when: '3:08PM',
+        notes: " I'll be in your neighborhood doing errands"
+      },
+      {
+        face : imagePath,
+        what: 'Brunch this weekend?',
+        who: 'Min Li Chan',
+        when: '3:08PM',
+        notes: " I'll be in your neighborhood doing errands"
+      },
+    ];
 }).controller('radioCtrl', function($scope) {
   $scope.data = {
     group1 : 'Banana',
@@ -51,4 +96,9 @@ angular.module('app', ['ngMaterial', 'ngRoute']).config(function($routeProvider)
   $scope.removeItem = function() {
     $scope.radioData.pop();
   };
+}).controller('selectCtrl', function() {
+  this.userState = '';
+  this.states = ('AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS ' +
+      'MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI ' +
+      'WY').split(' ').map(function (state) { return { abbrev: state }; });
 });
