@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name          = 'capybara-angular-material'
-  gem.version       = '0.1.0'
+  gem.version       = '0.1.1'
   gem.license       = 'MIT'
 
   gem.authors       = ['Rimian Perkins']

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    capybara-angular-material (0.1.0)
+    capybara-angular-material (0.1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -69,4 +69,4 @@ DEPENDENCIES
   sinatra (~> 1.4, >= 1.4.6)
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
