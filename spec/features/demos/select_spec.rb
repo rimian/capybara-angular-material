@@ -11,4 +11,10 @@ feature 'Angular Material Demos - select' do
   it 'has no select' do
     expect(page).not_to have_md_select('Oh, no!')
   end
+
+  describe 'Selecting' do
+    it 'selects an option' do
+      md_select('AZ', :from => 'State')
+    end
+  end
 end
