@@ -1,7 +1,5 @@
 .DS_Store
 *.gem
-.rvmrc
-.ruby-version
 .ruby-gemset
 .bundle
 node_modules
