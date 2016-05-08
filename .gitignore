@@ -4,3 +4,4 @@
 .bundle
 node_modules
 capybara-*
+!capybara-angular-material.gemspec
