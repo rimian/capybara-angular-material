@@ -40,6 +40,7 @@ have_md_button('Some text')
 have_md_radio_button('Banana', :checked => true)
 have_md_radio_button('Banana')
 have_md_radio_button('Some place holder text')
+have_md_select('Select Label')
 ```
 
 ### Interacting with forms
