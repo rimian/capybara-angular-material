@@ -14,7 +14,6 @@ module Capybara
           def md_select(value, options={})
             # trigger('click') prevents an overlapping element error.
             find(:xpath, "//md-select/md-select-value/span[not(@class)][text()='#{options[:from]}']").trigger('click')
-            expect(page).to have_no_selector(:xpath, select_md_text_xpath)
             find(
               :xpath,
               %{
@@ -23,7 +22,6 @@ module Capybara
                     and contains(@class, 'md-select-menu-container')]\
               /*/md-content/md-option[@value='#{value}']}
             ).trigger('click')
-            expect(page).to have_selector(:xpath, select_md_text_xpath)
           end
 
           private
