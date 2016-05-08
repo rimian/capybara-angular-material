@@ -22,7 +22,7 @@ module Capybara
           HaveSelector.new(:xpath, "//md-radio-button#{aria_checked(options)}/*/span[normalize-space(text())='#{locator}']")
         end
 
-        def have_md_select(locator)
+        def have_md_select(locator, options={})
           HaveSelector.new(:xpath, "//md-select/md-select-value/span[not(@class)][text()='#{locator}']")
         end
 
