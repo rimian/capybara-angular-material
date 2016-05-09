@@ -17,6 +17,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency('poltergeist', ['~> 1.6', '>= 1.6.0'])
   gem.add_development_dependency('rspec', ['~> 3.3', '>= 3.3.0'])
   gem.add_development_dependency('sinatra', ['~> 1.4', '>= 1.4.6'])
-  gem.add_development_dependency('sinatra', ['~> 1.4', '>= 1.4.6'])
   gem.add_development_dependency('pry', ['~> 0.10', '>= 0.10.3'])
 end
