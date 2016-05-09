@@ -66,6 +66,5 @@ feature 'Angular Material Demos - Checkbox' do
     end
 
     scenario 'uncheck unchecked checkbox'
-    scenario 'uncheck checked checkbox'
   end
 end
