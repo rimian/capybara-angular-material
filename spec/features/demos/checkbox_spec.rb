@@ -65,6 +65,10 @@ feature 'Angular Material Demos - Checkbox' do
       expect(page).to have_md_checkbox('Checkbox 1: false', :checked => false)
     end
 
-    scenario 'uncheck unchecked checkbox'
+    scenario 'uncheck unchecked checkbox' do
+      expect(page).not_to have_md_checkbox(checked_locator, :checked => false)
+      md_uncheck(checked_locator)
+      expect(page).not_to have_md_checkbox(checked_locator, :checked => false)
+    end
   end
 end
