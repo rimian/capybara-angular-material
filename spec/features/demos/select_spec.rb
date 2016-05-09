@@ -13,8 +13,14 @@ feature 'Angular Material Demos - select' do
   end
 
   describe 'Selecting' do
+    let(:option) { 'AZ' }
+
     it 'selects an option' do
-      md_select('AZ', :from => 'State')
+      expect {
+        md_select(option, :from => 'State')
+      }.to change {
+        page.all(:xpath, "//md-option[@value='#{option}']").size
+      }.from(0).to(1)
     end
   end
 end

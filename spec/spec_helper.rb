@@ -3,6 +3,7 @@ require 'capybara'
 require 'capybara/rspec'
 require 'capybara/poltergeist'
 require 'capybara/angular/material'
+require 'pry'
 
 RSpec.configure do |config|
   config.order = :random
