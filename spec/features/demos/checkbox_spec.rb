@@ -18,7 +18,9 @@ feature 'Angular Material Demos - Checkbox' do
     expect(page).not_to have_md_checkbox('Checkbox: Disabled, Checked', :disabled => false, :checked => true)
   end
 
-  it 'is not disabled'
+  it 'does not match if it does not have disabled' do
+    expect(page).not_to have_md_checkbox(checked_locator, :disabled => false)
+  end
 
   it 'has no checkbox' do
     expect(page).not_to have_md_checkbox 'checkbox that does not exist'
