@@ -1,0 +1,15 @@
+<div ng-controller="toastCtrl">
+  <p>
+  Toast can be dismissed with a swipe, a timer, or a button.<br/>
+  <span style="font-size:0.8em">Notice the 'Show Custom' toast will not nudge the FABs positions since a custom parent was specified.</span>
+  </p>
+  <md-button ng-click="showSimpleToast()">
+    Show Toast
+  </md-button>
+</div>
+<md-toast>
+  <span flex>Custom toast!</span>
+  <md-button ng-click="closeToast()">
+    Close
+  </md-button>
+</md-toast>
