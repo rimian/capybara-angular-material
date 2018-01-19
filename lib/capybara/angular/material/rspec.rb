@@ -2,6 +2,8 @@ module Capybara
   module Angular
     module Material
       module RSpecMatchers
+        include ::Capybara::RSpecMatchers
+
         def have_md_button(locator)
           HaveSelector.new(:xpath, "//button[contains(@class, 'md-button')]/span[normalize-space(text())='#{locator}']")
         end
